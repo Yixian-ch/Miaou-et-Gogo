@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小狗大厨的厨艺世界</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .menu-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 250px;
+            background-color: #1a1a1a; /* Dark background for menu */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px 0;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu-logo {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .menu-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            border-bottom: 1px solid #333; /* Divider between items */
+            padding: 15px 0;
+            text-align: left;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none; /* Remove border for the last item */
+        }
+
+        .menu-item a {
+            text-decoration: none; /* Removes underline */
+            color: #fff; /* Sets text color to white */
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Space between icon and text */
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-item a:hover {
+            color: #f39c12; /* Highlight color on hover */
+        }
+
+        .icon {
+            font-size: 24px; /* Adjust icon size */
+        }
+
+        .main {
+            margin-left: 250px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dynamic-image {
+            width: 50px;
+            height: 50px;
+            animation: spin 10s infinite linear;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .text-overlay {
+            position: absolute;
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-wrapper">
+        <div class="menu-logo">
+            <h1>看看有啥</h1>
+        </div>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="#coverage">
+                    <span class="icon">📍</span>
+                    <span class="menu-name">大厨乃何人也</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#cart">
+                    <span class="icon">🛒</span>
+                    <span class="menu-name">大厨精选食材</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#karma">
+                    <span class="icon">🤲</span>
+                    <span class="menu-name">瞅瞅做了啥</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#franchise">
+                    <span class="icon">🤝</span>
+                    <span class="menu-name">想合作？</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="tel:+10086">
+                    <span class="icon">📞</span>
+                    <span class="menu-name">想订餐？</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <span>
+                    <span class="icon">⏰</span>
+                    <span class="menu-name">开店时间？你问我？看大厨心情！</span>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="text-overlay">
+            <h1>美食诞生的地方</h1>
+        </div>
+        <img src="imgs/chef.jpg" alt="大厨" class="dynamic-image">
+    </div>
+</body>
+</html>
